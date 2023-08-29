@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="{{ url_for('static', filename='css/min.css') }}">
+    <title>{{ title }}</title>
+</head>
+<body>
+  <header>
+    <h2>Голова</h2>
+    <h3> >> Привет меня зовут {{ name }}</h3>
+    <img src="{{ url_for('static', filename='image/foto.jpg') }}" alt="фото">
+  </header>
+
+  <nav>
+    <h2>Навигация</h2>
+  </nav>
+
+  <main>
+    <h2>основная часть</h2>
+      <h3>
+        {% if number %}
+          к прочтению {{ number }}
+            {% if number == 1 %}
+              сообщение !
+            {% elif 5 > number > 1 %}
+              сообщения !
+            {% else %}
+              сообщений !
+            {% endif %}
+        {% else %}
+        Нет сообщений
+        {% endif %}
+      </h3>
+  </main>
+
+  <footer>
+    <h2>подвал</h2>
+    <p class="alert-dark">Все права защищены &copy;</p>
+  </footer>
+</body>
+</html>

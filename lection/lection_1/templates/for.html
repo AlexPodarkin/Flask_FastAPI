@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/min.css">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1> Стих </h1>
+    <p>
+        {% for line in poem %}
+        {{ line }}<br>
+        {% endfor %}
+    </p>
+</body>
+</html>

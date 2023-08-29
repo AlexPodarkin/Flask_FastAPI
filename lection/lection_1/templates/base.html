@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/min.css">
+    <title>
+      {% block title %}
+      {% endblock %}
+    </title>
+</head>
+<body>
+  <header>
+    <h2>
+      {% block header %}
+      "Голова block header" (информация из шаблона)
+      {% endblock %}
+    </h2>
+  </header>
+
+  <nav>
+    <h3>
+      {% block nav %}
+      "Навигация block nav" (информация из шаблона)
+      {% endblock %}
+    </h3>
+  </nav>
+
+  <main>
+    <p>
+      {% block main %}
+      "основная часть block main" (информация из шаблона)
+      {% endblock %}
+    </p>
+
+  </main>
+
+  <footer>
+    <h4>
+      {% block footer %}
+      "подвал block footer" (информация из шаблона)
+      {% endblock %}
+    </h4>
+    <p class="alert-dark">Все права защищены &copy;</p>
+  </footer>
+</body>
+</html>

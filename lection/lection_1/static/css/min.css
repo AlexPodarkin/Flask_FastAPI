@@ -1,0 +1,25 @@
+header {
+    color: blue;
+}
+
+nav {
+    color: magenta;
+    font-size: 15px;
+}
+
+main {
+    color: #8b00ff;
+    font-size: 20px;
+}
+
+footer {
+    color: red;
+    font-size: 20px;
+}
+
+.alert-dark {
+    font-size: 10px;
+}
+
+block title {
+}

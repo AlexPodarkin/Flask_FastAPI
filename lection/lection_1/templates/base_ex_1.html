@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+
+{% block title %}
+Наследование{{ title }}
+{% endblock %}
+
+{% block header %}
+<h2> Наследование от шаблона base.html -> base_ex_1.html </h2>
+{% endblock %}
+
+{% block nav %}
+<ul>
+    {% for point in menu %}
+    <li> {{ point }} </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block main %}
+<div>
+    Тут будет информация из шаблона: {{ super() }}  +  "Новая информация (которую мы добавим)"
+</div>
+{% endblock %}
+
+{% block footer %}
+Тут будет информация из шаблона: {{ super() }}  +  Контакты и полезные ссылки
+{% endblock %}
