@@ -91,6 +91,7 @@ def logout():
     response = make_response(render_template('login.html'))
     response.delete_cookie("username")
     response.delete_cookie("mail")
+    # response.set_cookie(*request.cookies, expires=0)
     return response
 
 
