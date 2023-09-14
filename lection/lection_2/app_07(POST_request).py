@@ -12,16 +12,16 @@ def index():
     return 'Hi'
 
 
-@app.route('/upload/', methods=['GET', 'POST'])
+@app.route('/upload', methods=['GET', 'POST'])
 def upload():
     if request.method == 'POST':
         file = request.files.get('file')
         file_name = secure_filename(file.filename)
         file.save(PurePath.joinpath(Path.cwd(), 'uploads', file_name))
-        return f'Файл {file_name} загружен на сервер'
+        return f"Файл {file_name} загружен на сервер"
     return render_template('upload.html')
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
 
