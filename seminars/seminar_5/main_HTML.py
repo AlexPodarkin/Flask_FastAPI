@@ -20,7 +20,7 @@ async def read_message():
 
 @app.get("/{name}", response_class=HTMLResponse)
 async def read_item(request: Request, name: str):
-    return templates.TemplateResponse("item.html", {"request": request, "name": name})
+    return templates.TemplateResponse("index.html", {"request": request, "name": name})
 
 
 # Swagger: http://127.0.0.1:8000/docs

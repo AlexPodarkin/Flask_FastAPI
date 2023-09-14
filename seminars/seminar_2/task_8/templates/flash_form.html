@@ -7,7 +7,7 @@ Flash
 {% block content %}
 <div class="about">
  <div class="container">
-     <form action="/flashform" method="post">
+     <form action="/flash_form" method="post">
          {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
                 {% for category, message in messages %}

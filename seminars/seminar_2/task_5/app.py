@@ -14,8 +14,7 @@ application.secret_key = b'b0ee5a2c6515091072087d57c6693be951cd9fc4629e5e66324c8
 
 @application.route('/')
 def index():
-    return 'Hi'
-    # redirect(url_for('math_get'))
+    return redirect(url_for('math_get'))
 
 
 @application.get('/math/')
