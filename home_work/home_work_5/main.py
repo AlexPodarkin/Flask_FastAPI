@@ -27,7 +27,7 @@ class Task(BaseModel):
 @app.get("/", response_class=HTMLResponse)
 async def index(request: Request):
     logger.info('Отработал GET запрос(Главная страница).')
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse("item.html", {"request": request})
 
 
 @app.get('/tasks/')
